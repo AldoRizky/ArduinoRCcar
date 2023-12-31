@@ -2,7 +2,6 @@
 #include<RF24.h>
 #include<SPI.h>
 #include <MX1508.h>
-#include<Servo.h>
 
 #define PIN_A1 9
 #define PIN_B1 10
@@ -11,9 +10,8 @@
 #define NUMPWM1 2
 #define NUMPWM2 1
 MX1508 motorA(PIN_A1,PIN_B1, FAST_DECAY, NUMPWM1);
-//MX1508 motorB(PIN_A2,PIN_B2, FAST_DECAY, NUMPWM2);
 
-int maju, belok;
+int maju;
 
 RF24 rf24(5,6); // ESP (2,4) (CS, CSN) NANO (7, 8) ATMEGA8(5, 6)
 const byte alamat = 255; //disesuaikan dengan transmitter
